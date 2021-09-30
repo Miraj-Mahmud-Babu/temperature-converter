@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempareture Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="title">
+            Real Time Tempareture Converter
+        </div>
+        <div id="tempareture">
+            <div class="row">
+                <div class="col">
+                    <input type="number"  id="celcius" placeholder="Enter Degree Celcius">
+                </div>
+                <div class="col">
+                    <input type="number" placeholder="Enter Farenhight" id="farenhight">
+                </div>
+            </div>
+            <input type="submit" id="btn">
+        </div>
+        <div class="second-div">
+            <div id="converted-value">
+                <div class="col">
+                    <h3>Celcius</h3>
+                    <ul id="c-celcius">
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Farenhight</h3>
+                    <ul id="c-farenheight">
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Time</h3>
+                    <ul id="c-time">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

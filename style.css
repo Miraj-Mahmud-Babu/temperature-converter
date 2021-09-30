@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#container {
+    display: flex;
+    justify-content: center;
+    /* height: 100vh; */
+    align-items: center;
+    flex-direction: column;
+}
+
+div#tempareture {
+    background-color: #8dc8ff;
+    /* height: 171px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    padding: 30px;
+    box-shadow: 0px -2px 9px #cccccc;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+input#btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+    min-width: 150px;
+    border-radius: 5px;
+    border: navajowhite;
+    font-size: 18px;
+    background-color: #ff7e7e;
+    cursor: pointer;
+    height: 40px;
+    transition: all 0.5s;
+}
+
+input#btn:hover {
+    background-color: rgb(189, 178, 177);
+    transition: all 0.5s;
+    min-width: 180px;
+}
+
+input#farenhight, input#celcius {
+    padding: 10px;
+    border: none;
+    font-size: 17px;
+    outline: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+div#converted-value {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #e8e8e8;
+    width: 50%;
+    padding: 30px;
+    box-shadow: 0px 4px 10px #a0a0a0;
+    flex-wrap: wrap;
+}
+
+.col {
+    padding: 30px;
+}
+
+.second-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-size: 50px;
+    margin: 50px 0;
+    text-align: center;
+    color: green;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+li {
+    margin-bottom: 24px;
+    list-style: none;
+}
+
+.col>h3 {
+    padding-bottom: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    div#container {
+        height: auto;
+    }
+    .title {
+        color: blue;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 600px) {
+    .title {
+        font-size: 22px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        color: rgb(143, 0, 100);
+        padding: 0 30px;
+    }
+    div#container {
+        display: flex;
+        justify-content: center;
+        height: auto;
+        align-items: center;
+        flex-direction: column;
+    }
+    div#tempareture {
+        width: 95%;
+        padding: 10px;
+    }
+    .col {
+        padding: 7px;
+        /* width: 100%; */
+    }
+    div#converted-value {
+        width: 95%;
+    }
+}

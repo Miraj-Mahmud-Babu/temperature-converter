@@ -1,0 +1,85 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript: add LI to UL</title>
+    <meta charset="windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <input type="text" id="txtVal">
+    <button onclick="addLi()">Add</button>
+
+    <ul id="c-time">
+        
+    </ul>
+
+
+
+    <script>
+
+        function addLi() {
+
+
+            let listNode3 = document.getElementById('c-time');
+            let liNode3 = document.createElement("LI");
+            liNode3.innerHTML = Date();
+            listNode3.appendChild(liNode3);
+            //  console.log(listNode.appendChild(liNode) + Date());
+
+
+        }
+
+    </script>
+
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo-List</title>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h2>To-Do List</h2>
+        </header>
+        <input id="textArea" type="text" placeholder="Enter list item here!"><input id="submit" type="submit"
+            value="Add">
+    </div>
+    <div id="tasks-div">
+        <ul id="tasks-list"></ul>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        let textArea = document.getElementById("textArea");
+        let submit = document.getElementById("submit");
+        let ul = document.querySelector("ul");
+        let deleteIcon = document.createTextNode(" X ");
+
+        //add todos
+        let addTodos = submit.addEventListener("click", function () {
+            let value = textArea.value;
+            let li = document.createElement("li");
+            li.textContent = value;
+            let listItem = ul.appendChild(li);
+            for (var i = 0; i < listItem.length; i++) {
+                li += " X ";
+            }
+            textArea.value = "";
+        });
+    </script>
+</body>
+
+</html>
